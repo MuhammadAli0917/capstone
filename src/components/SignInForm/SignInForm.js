@@ -1,4 +1,4 @@
-import {useContext, useState} from "react";
+import {useState} from "react";
 
 import {FormInput} from "../FormInput/FormInput";
 import Button from "../Button/Button";
@@ -8,7 +8,7 @@ import {
     signInWithGooglePopUp
 } from "../../utils/firebase/firebase";
 
-import {UserContext} from "../../contexts/user.context";
+// import {UserContext} from "../../contexts/user.context";
 import {ButtonsContainer, Container} from "./SignInForm.style";
 
 const defaultFormFields = {
