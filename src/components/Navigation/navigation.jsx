@@ -1,5 +1,5 @@
 import React, {useContext} from 'react';
-import {Link, Outlet} from "react-router-dom";
+import {Outlet} from "react-router-dom";
 import {ReactComponent as CrwnLogo} from "../../assets/crown.svg";
 import "./navigation.styles"
 import {UserContext} from "../../contexts/user.context";
@@ -11,7 +11,7 @@ import {LogoContainer, NavigationContainer, NavLinks, NavLink} from "./navigatio
 
 const Navigation = () => {
 
-    const {currentUser, setCurrentUser} = useContext(UserContext)
+    const {currentUser} = useContext(UserContext)
     const {isCartOpen} = useContext(CartContext)
 
     return (

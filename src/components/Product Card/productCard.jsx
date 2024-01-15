@@ -5,7 +5,7 @@ import {Footer, Name, Price, ProductCardContainer} from "./productCard.styles";
 
 const ProductCard = ({product}) => {
     const {name, price, imageUrl} = product
-    const {addItemToCart, cartItems} = useContext(CartContext)
+    const {addItemToCart} = useContext(CartContext)
 
     const addProduct = () => addItemToCart(product)
     return (

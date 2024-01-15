@@ -1,5 +1,5 @@
 import "./categories.styles.scss"
-import {Outlet, Route, Routes} from "react-router-dom";
+import {Route, Routes} from "react-router-dom";
 import Home from "./routes/home/home";
 import React from "react";
 import Navigation from "./components/Navigation/navigation";

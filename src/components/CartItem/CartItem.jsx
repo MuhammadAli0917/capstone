@@ -1,5 +1,4 @@
 import "./cartItem.style"
-import Button from "../Button/Button";
 import {CartItemContainer, ItemDetails, Name} from "./cartItem.style";
 
 const CartItem = ({cartItem}) => {

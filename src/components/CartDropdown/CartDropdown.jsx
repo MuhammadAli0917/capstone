@@ -3,7 +3,7 @@ import Button from "../Button/Button";
 import CartItem from "../CartItem/CartItem";
 import {useContext} from "react";
 import {CartContext} from "../../contexts/cart.context";
-import {Link, useNavigate} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import {Container, CartItems, EmptyMessage} from "./cartDropdown.style";
 
 const CartDropdown = () => {

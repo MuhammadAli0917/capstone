@@ -4,7 +4,7 @@ import {FormInput} from "../FormInput/FormInput";
 import Button from "../Button/Button";
 
 import {
-    createUserDocumentFromAuth, signInAuthUserWithEmailAndPassword,
+    signInAuthUserWithEmailAndPassword,
     signInWithGooglePopUp
 } from "../../utils/firebase/firebase";
 
