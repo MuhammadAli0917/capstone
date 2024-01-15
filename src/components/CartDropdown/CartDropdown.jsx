@@ -7,7 +7,7 @@ import {useNavigate} from "react-router-dom";
 import {Container, CartItems, EmptyMessage} from "./cartDropdown.style";
 
 const CartDropdown = () => {
-    const {cartItems, setIsCartOpen, isCartOpen} = useContext(CartContext)
+    const {cartItems, setIsCartOpen} = useContext(CartContext)
 
     const navigate = useNavigate()
 

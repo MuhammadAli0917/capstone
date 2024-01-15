@@ -1,7 +1,7 @@
 import React, {useContext} from 'react';
 import "./checkoutItem.styles"
 import {CartContext} from "../../contexts/cart.context";
-import {Arrow, Container, ImageContainer, Price, Quantity, RemoveButton, SpanCom, Value} from "./checkoutItem.styles";
+import {Arrow, Container, ImageContainer, Price, Quantity, RemoveButton, Value} from "./checkoutItem.styles";
 import {Name} from "../CartItem/cartItem.style";
 
 const CheckoutItem = ({cartItem}) => {
