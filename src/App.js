@@ -9,12 +9,15 @@ import Checkout from "./routes/checkout/checkout";
 
 function App() {
 
+    const Hello = () => <h1>Alo</h1>
+
 
     return(
         <Routes>
             <Route path={"/"} element={<Navigation />}>
                 <Route index element={<Home />} />
                 <Route path="shop/*" element={<Shop />} />
+                <Route path="hello" element={<Hello />} />
                 <Route path="auth" element={<Authentication />} />
                 <Route path="checkout" element={<Checkout />} />
             </Route>
