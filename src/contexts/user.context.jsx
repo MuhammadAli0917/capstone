@@ -30,17 +30,16 @@ const userReducer = (state, action) => {
 export const UserProvider = ({ children }) => {
     const [{ currentUser }, dispatch] = useReducer(userReducer, INITIAL_STATE);
 
+    const setCurrentUser = (user) => dispatch(createAction(USER_ACTION_TYPES.SET_CURRENT_USER, user))
+
     useEffect(() => {
         const unsubscribe = onAuthStateChangedListener((user) => {
             if (user) {
-                createUserDocumentFromAuth(user).then(() => {
-                    dispatch({ type: USER_ACTION_TYPES.SET_CURRENT_USER, payload: user });
-                }).catch(error => {
-                    console.error("Error creating user document:", error);
-                });
-            } else {
-                dispatch(createAction(USER_ACTION_TYPES.SET_CURRENT_USER, null))
+                createUserDocumentFromAuth(user)
+
             }
+            setCurrentUser(user)
+
         });
 
         return unsubscribe;
