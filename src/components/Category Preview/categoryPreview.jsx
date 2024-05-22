@@ -7,7 +7,6 @@ import {Container, Preview, Title} from "./categoryPreview.styles";
 function CategoryPreview({title, products}) {
 
 
-
     return (
         <Container>
             <h2>

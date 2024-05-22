@@ -1,19 +1,20 @@
 import "./categoryPage.styles"
 
-import React, {useContext, useEffect, useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {useParams} from "react-router";
-import {CategoriesContext} from "../../contexts/categories.context";
 import ProductCard from "../../components/Product Card/productCard";
 import {CategoryTitle, Container} from "./categoryPage.styles";
+import {useSelector} from "react-redux";
+import {selectCategoriesMap} from "../../store/categories/category.selector";
 
 function CategoryPage() {
     const {category} = useParams()
-    const {categories} = useContext(CategoriesContext)
-    const [products, setProducts] = useState(categories[category])
+    const categoriesMap = useSelector(selectCategoriesMap)
+    const [products, setProducts] = useState(categoriesMap[category])
 
     useEffect(() => {
-        setProducts(categories[category])
-    }, [category, categories])
+        setProducts(categoriesMap[category])
+    }, [category, categoriesMap])
 
     return (
         <>
