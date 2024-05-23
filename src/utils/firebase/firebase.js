@@ -63,7 +63,7 @@ export const getCategoriesAndDocuments = async () => {
 export const createUserDocumentFromAuth = async (userAuth, additionalInfo) => {
     const userDocRef = doc(db, "users", userAuth.uid)
 
-    console.log(userDocRef)
+    // console.log(userDocRef)
 
     const userSnapshot = await getDoc(userDocRef)
 
