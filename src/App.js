@@ -6,8 +6,7 @@ import Navigation from "./components/Navigation/navigation";
 import Authentication from "./routes/sign-in/authentication";
 import Shop from "./components/Shop/shop";
 import Checkout from "./routes/checkout/checkout";
-import {createUserDocumentFromAuth, onAuthStateChangedListener} from "./utils/firebase/firebase";
-import {setCurrentUser} from "./store/user/user.action";
+import {checkUserSession, setCurrentUser} from "./store/user/user.action";
 import {useDispatch} from "react-redux";
 
 function App() {
@@ -15,16 +14,7 @@ function App() {
 
 
     useEffect(() => {
-        const unsubscribe = onAuthStateChangedListener((user) => {
-            if (user) {
-                createUserDocumentFromAuth(user)
-
-            }
-            dispatch(setCurrentUser(user))
-
-        });
-
-        return unsubscribe;
+        dispatch(checkUserSession())
     }, []);
 
 
