@@ -1,7 +1,9 @@
 import {createSelector} from "reselect";
 import {useSelector} from "react-redux";
+import {CartState} from "./cart.reducer";
+import {RootState} from "../store";
 
-export const selectCartReducer = state => state.cart
+export const selectCartReducer = (state: RootState): CartState => state.cart
 
 export const selectCartItems = createSelector(
     [selectCartReducer],
